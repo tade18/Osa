@@ -7,19 +7,23 @@ body{
 #objekt{
     width:  90px;
     height: 90px;
-    background-color: rgb(0, 255, 47);
+    border: rgb(0, 255, 47) 6px solid;
+    background-color: rgb(55, 173, 76);
     border-radius: 50%;
     position: absolute;
     transition:0.3s ease;
+    filter: blur(3px);
+    top: 50%;
+    left: 50%;
 }
 button{
     height: 50px;
-    width: 80px;
-    font-size: large;
+    font-family: fantasy;
+    width: 180px;
+    font-size: 40px;
     color: rgb(0, 255, 47);
     background-color: black;
     border: 3px rgb(0, 255, 47) solid;
-    border-radius: 20%;
     margin: auto;
     top: 10px;
     right: auto;
@@ -29,8 +33,4 @@ button:hover{
     background-color: rgb(0, 255, 47);
     border: black 3px solid;
     color: rgb(0, 0, 0);
-}
-#container{
-    width: 100%;
-    display: block;
 }
