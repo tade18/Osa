@@ -23,7 +23,8 @@ const hideElement = (element) => {
 const startGameInterval = (element) => {
     clearInterval(gameInterval);
     gameInterval=setInterval(()=>{
-        movePoint(element, getRandomNumber(80,window.innerWidth-parseInt(element.style.width)), getRandomNumber(80,window.innerHeight-parseInt(element.style.height)));
+        movePoint(element, getRandomNumber(80,window.innerWidth-parseInt(element.style.width)),
+        getRandomNumber(80,window.innerHeight-parseInt(element.style.height)));
         setSize(element, getRandomNumber(40, 80));
     },550)
 }
@@ -31,10 +32,12 @@ const startGameInterval = (element) => {
 const setPointClick = (element) => {
     element.onclick = () => {
         element.innerText++;
-        movePoint(element, getRandomNumber(80,window.innerWidth-parseInt(element.style.width)), getRandomNumber(80,window.innerHeight-parseInt.style.height));
+        movePoint(element, getRandomNumber(80,window.innerWidth-parseInt(element.style.width)),
+        getRandomNumber(80,window.innerHeight-parseInt(element.style.height)));
         setSize(element, getRandomNumber(40, 80));
         let timeEnd = performance.now();
         let result = timeEnd - timeStart;
+        console.log(result)
         timer.innerText = `Time: ${result}ms`;
     }
 }
